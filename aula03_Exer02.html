@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+
+        }
+        .container-box{
+            display: inline-block;
+            margin: 10px;
+            background-color: rgb(127, 187, 255);
+            margin: auto;
+            border-radius:10% ;
+            margin-top: 20px; 
+            margin-bottom: 20px;  
+        }
+        .container-principal{
+            display: flex;
+            background-color: rgba(99, 189, 224, 0.459);
+            margin: 300px;
+            border-radius: 5%;
+       
+        }
+        .box{
+            margin: 50px;
+            margin-bottom: 60px;
+            border-radius: 3%;
+        }
+        .text {
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            resize: none;
+            
+        }
+        .titulo{
+            text-align: center;
+            font-family:Arial, Helvetica, sans-serif;
+            text-decoration: underline rgb(70, 159, 243);
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <script src="index.js"></script>
+    <div class="container-principal">
+        <div class="container-box">
+            <div>
+                <h2 class="titulo">Fazer</h2>
+            </div>
+            <div id="div1" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <textarea id= "data1" class="text" draggable="true" ondragstart="drag(event)" rows="4" cols="20"></textarea>
+            </div>
+                
+            <div id="div1" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <textarea id= "data2" class="text"draggable="true" ondragstart="drag(event)" rows="4" cols="20"></textarea>
+            </div>
+            <div id="div1" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <textarea id= "data3" class="text" draggable="true" ondragstart="drag(event)" rows="4" cols="20"></textarea>
+            </div>
+        </div>
+
+        <div class="container-box">
+            <div>
+                <h2 class="titulo">Fazendo</h2>
+            </div>
+            <div id="div1" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+                <!--<textarea id= "data" draggable="true" ondragstart="drag(event)" rows="4" cols="20"></textarea>-->
+            <div id="div1" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            </div>
+            <div id="div1" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            </div>
+        </div>
+        <div class="container-box">
+            <div>
+                <h2 class="titulo">Feito</h2>
+            </div>
+            <div id="div1" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+                <!--<textarea id= "data" draggable="true" ondragstart="drag(event)" rows="4" cols="20"></textarea>-->
+            <div id="div1" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            </div>
+            <div id="div1" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            </div>
+        </div>
+    </div>
+   
+</body>
+
+</html>

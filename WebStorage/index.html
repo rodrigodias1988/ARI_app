@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form name="dados">
+        <label> Nome:</label><br>
+        <input type="text" name="fnome" id="fnome" size="20"><br><br>
+
+        <label>Cor Fundo:</label><br>
+        <input type = "radio" name="fcorF" onclick="defineCor(1,'#f00')">Vermelho<br>
+        <input type = "radio" name="fcorF" onclick="defineCor(1,'#0f0')">Verde<br>
+        <input type = "radio" name="fcorF" onclick="defineCor(1,'#00f')">Azul<br><br>
+
+        <label>Cor de Texto:</label><br>
+        <input type = "radio" name="fcorT" onclick="defineCor(2,'#000')">Preto<br>
+        <input type = "radio" name="fcorT" onclick="defineCor(2,'#fff')">Branco<br>
+        <input type = "radio" name="fcorT" onclick="defineCor(2,'#ff0')">Amarelo<br><br>
+        <input type = "button" value="Gravar" onclick="gravar()"><br>
+    </form>
+    <script>
+        var vcorfundo;
+        var vcortexto; 
+        var vnome;
+
+        function defineCor(op,cor){ 
+            if(op==1){
+                document.body.style.backgroundColor=cor;
+                vcorfundo=cor;
+            }else{
+                document.body.style.color=cor;
+                vcortexto=cor; 
+            }
+        }
+
+        function gravar(){
+            vnome=document.getElementById("fnome").value;
+            localStorage.corfundo=vcorfundo;
+            localStorage.cortexto=vcortexto;
+            localStorage.nome = vnome; 
+        }
+
+
+    </script>
+ </body>
+ </html>

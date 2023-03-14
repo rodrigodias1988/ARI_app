@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div1 {
+            width: 350px;
+            height: 70px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .containers{
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .container-principal{
+            display: flex;
+            margin: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <script src="index.js"></script>
+    <div class="container-principal">
+        <div id="div1" class="containers" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id= "drag1" src="comida.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+        </div>
+            <!--<textarea id= "data" draggable="true" ondragstart="drag(event)" rows="4" cols="20"></textarea>-->
+        <div id="div1" class="containers" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        </div>
+        <div id="div1" class="containers" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        </div>
+        <div id="div1" class="containers" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        </div>
+    </div>
+   
+</body>
+
+</html>
