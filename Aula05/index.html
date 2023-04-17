@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #fconf{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border: 1px solid #000;
+        background-color: #fff;
+        padding: 20px;
+        display: none;
+    }
+</style>
+<body>
+    <p id="painel"></p>
+    <button onclick="mostrarOpcoes()">Opciones</button>
+    <form name="fconf" id="fconf">
+        <label>Nome:</label><br>
+        <input type="text" name="fnome"id="fnome"size="20"><br><br>
+        <label>Cor fundo</label><br>
+        <input type="radio" name="fcorF" onclick="defineCor(1,'#f00')">Vermelho<br>
+        <input type="radio" name="fcorF" onclick="defineCor(1,'#0f0')">Verde<br>
+        <input type="radio" name="fcorF" onclick="defineCor(1,'#00f')">Azul<br><br>
+
+        <label>Cor de Texto</label><br>
+        <input type="radio" name="fcorT" onclick="defineCor(2,'#000')">Preto<br>
+        <input type="radio" name="fcorT" onclick="defineCor(2,'#fff')">Branco<br>
+        <input type="radio" name="fcorT" onclick="defineCor(2,'#ff0')">Amarelo<br><br>
+
+        <input type="button"value="Gravar" onclick="gravar()"><br>
+          
+
+    </form>
+
+    <script>
+        var vcorfundo;
+        var vcorfonte;
+        var vnome;
+
+
+
+        function mostrarOpcoes(){
+            let form = document.getElementById("fconf");
+            form.style.display="block"
+        }
+        function gravar(){
+            let form = document.getElementById("fconf");
+            vnome=document.getElementById("fnome").value;
+            localStorage.corfundo= vcorfundo
+            localStorage.corTexto= vcorfonte
+            localStorage.nome= vnome
+            form.style.display = "none"
+    }
+    function defineCor(op,cor){
+        if(op==1){
+           document.body.style.backgroundColor=cor
+            //armazeno a cor de fundo na variavel vcorfundo
+           vcorfundo=cor;
+        
+        }else{
+       // document.body.style.color=cor
+       // armazeno a cor de fundo na variavel vcorfonte
+            vcorfonte=cor;
+    }
+     }
+    function inicio (){
+            if(localStorage.nome){
+                vcorfundo=localStorage.corfundo
+                vcorfonte=localStorage.corTexto
+                vnome=localStorage.nome
+                defineCor(1,vcorfundo)
+                defineCor(2,vcorfonte)
+                document.getElementById("painel").innerHTML="Bem vindo "+vnome+"<hr>"
+        
+            }
+
+        }
+    window.addEventListener("load",inicio);
+
+    </script>
+
+     
+</body>
+</html>
