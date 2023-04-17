@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de sala</title>
+    <style>
+        .video {
+
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-top: 100px;
+        }
+
+        .button {
+
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button {
+
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section class="video">
+        <div class="container">
+            <video id= "video" src="./assets/video.mp4" width="560px" height="315px" poster="./assets/terra.jpeg"></video>
+            </video>
+        </div>
+    </section>
+    <div class="button">
+        <button onclick="playVideoBtn()">Reproduzir <br> vídeo</button>
+        <button onclick="pauseVideoBtn()">Pausar <br> vídeo</button>
+        <button onclick="muteVideoBtn()">Mutar <br> vídeo</button>
+        <button onclick="rewindVideoBtn()">Retroceder <br> vídeo</button>
+        <button onclick="forwardVideoBtn()">Avançar <br> vídeo</button>
+        <button onclick="fullScreenVideoBtn()">Tela <br> Cheia</button>
+</body>
+<script>
+    const video = document.getElementById('video');
+
+    window.playVideoBtn=function(){
+        video.play();
+    }
+
+    window.pauseVideoBtn=function(){
+        video.pause();
+    }
+
+    window.muteVideoBtn=function(){
+        video.muted=true
+    }
+    window.rewindVideoBtn=function(){
+        video.currentTime -=5
+    }
+    window.forwardVideoBtn=function(){
+        video.currentTime +=5
+    }
+    window.fullScreenVideoBtn=function(){
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        }
+    }
+
+    window.fullScreamVideoBtn.addEventListener('click', function(){video.fullScreen});
+
+
+</script>
+</html>

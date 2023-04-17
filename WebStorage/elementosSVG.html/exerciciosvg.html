@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício SGV</title>
+    <style>
+        body {
+            margin:0;
+        }
+        svg {
+
+            background-color: rgba(205, 162, 110, 0.282);
+        }
+    </style>
+</head>
+<body>
+    <svg width="900" height="1000">
+        <!-- Cabeça -->
+        <circle cx="250" cy="250" r="75" fill="pink" stroke="black" stroke-width="2"></circle>
+        <!-- Olho esquerdo -->
+        <circle cx="220" cy="230" r="16" fill="white" stroke="black" stroke-width="1"></circle>
+        <!-- Olho direito -->
+        <circle cx="280" cy="230" r="16" fill="white" stroke="black" stroke-width="1"></circle>
+        <!-- Chapéu -->
+        <polygon points ="168,200 330,200 246,30" fill="black"></polygon>
+        <!-- Nariz -->
+        <polyline fill="none" stroke="black" stroke-width="2" points="250,250 250,265"></polyline>
+        <!-- Boca -->
+        <polyline fill="none" stroke="black" stroke-width="3" points="220,290 280,290"></polyline>
+        <!-- Pescoço -->
+        <polyline fill="none" stroke="orange" stroke-width="12" points="250,370 250,325"></polyline>
+        <!-- Corpo -->
+        <rect x="160" y="370" width="180" height="180" fill="green" rx="60" fill-opacity="0.2"></rect>
+        <!-- Losango -->
+        <polygon points="180,460 250,530 320,460 250,390" fill="grey" fill-opacity="0.4"></polygon>
+        <!-- Perna esquerda -->
+        <polyline fill="none" stroke="green" stroke-width="20" points="220,550 220,700"></polyline>
+        <!-- Perna dereita -->
+        <polyline fill="none" stroke="green" stroke-width="20" points="280,550 280,700"></polyline>
+        <!-- Braço esquerdo -->
+        <polyline fill="none" stroke="orange" stroke-width="5" points="90,510 160,430"></polyline>
+        <!-- Braço esquerdo -->
+        <polyline fill="none" stroke="orange" stroke-width="5" points="400,510 340,430"></polyline>
+
+        
+    </svg>
+</body>
+</html>
